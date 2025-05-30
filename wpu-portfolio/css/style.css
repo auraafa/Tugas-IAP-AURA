@@ -1,0 +1,33 @@
+body {
+    margin-top: 50px;
+}
+
+.jumbotron img {
+    width: 25%;
+}
+
+section {
+    min-height: 420px;
+}
+
+footer {
+    min-height: 50px;
+    padding-top:12px;
+}
+
+.ig-thumbnail {
+    width: 100px;
+    height: 100px;
+    overflow: hidden;
+    display: inline-block; /* penting untuk menjaga ukuran tetap */
+    position: relative;
+}
+
+.ig-thumbnail img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    display: block; /* biar gak ada jarak bawah */
+}
+
+
