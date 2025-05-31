@@ -211,7 +211,7 @@ $config['auth_library_function'] = '';
 | Array of usernames and passwords for login, if ldap is configured this is ignored
 |
 */
-$config['rest_valid_logins'] = ['admin' => '1234', 'sandhika' => 'wpu123'];
+$config['rest_valid_logins'] = ['admin' => '1234', 'aura' => 'wpu123'];
 
 /*
 |--------------------------------------------------------------------------
