@@ -1,29 +1,35 @@
 <?php 
-function get_CURL($url)
-{
-$curl = curl_init();
-curl_setopt($curl, CURLOPT_URL, $url );
-curl_setopt($curl, CURLOPT_RETURNTRANSFER, 1);
-$result = curl_exec($curl);
-curl_close($curl);
+function get_CURL($url) {
+    $curl = curl_init();
+    curl_setopt($curl, CURLOPT_URL, $url);
+    curl_setopt($curl, CURLOPT_RETURNTRANSFER, 1);
+    $result = curl_exec($curl);
+    curl_close($curl);
 
-return json_decode($result, true);
+    return json_decode($result, true);
 }
 
+// Channel YouTube Pertama
 $result = get_CURL('https://www.googleapis.com/youtube/v3/channels?part=snippet,statistics&id=UCLkAepWjdylmXSltofFvsYQ&key=AIzaSyBgLb7yWxQejxgp7JqOVa0irpPodansbeA');
-
 $youtubeProfilePic = $result['items'][0]['snippet']['thumbnails']['medium']['url'];
 $channelName = $result['items'][0]['snippet']['title'];
 $subscriber = $result['items'][0]['statistics']['subscriberCount'];
 
-
-//latest video
-$urlLatestVideo = 'https://www.googleapis.com/youtube/v3/search?key=AIzaSyBgLb7yWxQejxgp7JqOVa0irpPodansbeA&channelId=UCLkAepWjdylmXSltofFvsYQ&maxResults=2&order=date&part=snippet';
+$urlLatestVideo = 'https://www.googleapis.com/youtube/v3/search?key=AIzaSyBgLb7yWxQejxgp7JqOVa0irpPodansbeA&channelId=UCLkAepWjdylmXSltofFvsYQ&maxResults=1&order=date&part=snippet';
 $result = get_Curl($urlLatestVideo);
-$LatestVideoId = $result['items'][0]['id']['videoId']
+$LatestVideoId = $result['items'][0]['id']['videoId'];
 
+// Channel YouTube Kedua (BLACKPINK)
+$result2 = get_CURL('https://www.googleapis.com/youtube/v3/channels?part=snippet,contentDetails,Statistics&id=UCOmHUn--16B90oW2L6FRR3A&key=AIzaSyBgLb7yWxQejxgp7JqOVa0irpPodansbeA');
+$youtubeProfilePic2 = $result2['items'][0]['snippet']['thumbnails']['medium']['url'];
+$channelName2 = $result2['items'][0]['snippet']['title'];
+$subscriber2 = $result2['items'][0]['statistics']['subscriberCount'];
 
+$urlLatestVideo2 = 'https://www.googleapis.com/youtube/v3/search?key=AIzaSyBgLb7yWxQejxgp7JqOVa0irpPodansbeA&channelId=UCOmHUn--16B90oW2L6FRR3A&maxResults=1&order=date&part=snippet';
+$result2 = get_Curl($urlLatestVideo2);
+$LatestVideoId2 = $result2['items'][0]['id']['videoId'];
 ?>
+
 
 
 <!doctype html>
@@ -96,12 +102,12 @@ $LatestVideoId = $result['items'][0]['id']['videoId']
       </div>
     </section>
 
-    <!--Youtube & IG -->
+    <!--Youtube & Youtube -->
     <section class="social bg-light" id="social">
       <div class="container">
         <div class="row pt-4 mb-4">
           <div class="col text-center">
-            <h2>Social Media</h2>
+            <h2>Playlists Youtube</h2>
           </div>
         </div>
 
@@ -127,21 +133,22 @@ $LatestVideoId = $result['items'][0]['id']['videoId']
           <div class="col-md-5">
             <div class="row">
               <div class="col-md-4">
-                <img src="img/profile1.png" width="100" class=""rounded-circle img-thumbnail>
+                <img src="<?= $youtubeProfilePic2; ?>" width="100" class="rounded-circle img-thumbnail">
               </div>
               <div class="col-md-8">
-                <h5>@afirex4</h5>
-                <p>6 Followers.</p>
+                <h5><?= $channelName2; ?></h5>
+                <p><?= $subscriber2; ?> Subscriber.</p>
               </div>
             </div>
-
-           <div class="row mt-3 pd-3">
+            <div class="row mt-3 pd-3">
               <div class="col">
-                <div class="ig-thumbnail">
-                  <img src="">
+                <div class="embed-responsive embed-responsive-16by9">
+                  <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/<?= $LatestVideoId2; ?>?rel=0" allowfullscreen></iframe>
                 </div>
               </div>
-           </div>
+            </div>
+          </div>
+
 
           </div>
         </div>
@@ -149,72 +156,68 @@ $LatestVideoId = $result['items'][0]['id']['videoId']
     </section>
 
     <!-- Portfolio -->
-    <section class="portfolio" id="portfolio">
-      <div class="container">
-        <div class="row pt-4 mb-4">
-          <div class="col text-center">
-            <h2>Portfolio</h2>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-md mb-4">
-            <div class="card">
-              <img class="card-img-top" src="img/thumbs/1.png" alt="Card image cap">
-              <div class="card-body">
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-              </div>
-            </div>
-          </div>
+<section class="portfolio" id="portfolio">
+  <div class="container">
+    <div class="row pt-4 mb-4">
+      <div class="col text-center">
+        <h2>Portfolio</h2>
+      </div>
+    </div>
 
-          <div class="col-md mb-4">
-            <div class="card">
-              <img class="card-img-top" src="img/thumbs/2.png" alt="Card image cap">
-              <div class="card-body">
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-md mb-4">
-            <div class="card">
-              <img class="card-img-top" src="img/thumbs/3.png" alt="Card image cap">
-              <div class="card-body">
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-              </div>
-            </div>
-          </div>   
-        </div>
-
-        <div class="row">
-          <div class="col-md mb-4">
-            <div class="card">
-              <img class="card-img-top" src="img/thumbs/4.png" alt="Card image cap">
-              <div class="card-body">
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-              </div>
-            </div>
-          </div> 
-          <div class="col-md mb-4">
-            <div class="card">
-              <img class="card-img-top" src="img/thumbs/5.png" alt="Card image cap">
-              <div class="card-body">
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.
-                </p>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-md mb-4">
-            <div class="card">
-              <img class="card-img-top" src="img/thumbs/6.png" alt="Card image cap">
-              <div class="card-body">
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-              </div>
-            </div>
+    <div class="row">
+      <div class="col-md-4 mb-4">
+        <div class="card">
+          <img class="card-img-top" src="img/thumbs/1.png" alt="Card image cap">
+          <div class="card-body text-center">
+            <p class="card-text">Desain UI/UX Website Bisnis</p>
+            <a href="#" class="btn btn-primary">Lihat</a>
           </div>
         </div>
       </div>
-    </section>
+
+      <div class="col-md-4 mb-4">
+        <div class="card">
+          <img class="card-img-top" src="img/thumbs/2.png" alt="Card image cap">
+          <div class="card-body text-center">
+            <p class="card-text">Aplikasi Manajemen Gudang</p>
+            <a href="#" class="btn btn-primary">Lihat</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4 mb-4">
+        <div class="card">
+          <img class="card-img-top" src="img/thumbs/3.png" alt="Card image cap">
+          <div class="card-body text-center">
+            <p class="card-text">Desain Poster Digital</p>
+            <a href="#" class="btn btn-primary">Lihat</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4 mb-4">
+        <div class="card">
+          <img class="card-img-top" src="img/thumbs/4.png" alt="Card image cap">
+          <div class="card-body text-center">
+            <p class="card-text">Ilustrasi Karakter</p>
+            <a href="#" class="btn btn-primary">Lihat</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4 mb-4">
+        <div class="card">
+          <img class="card-img-top" src="img/thumbs/5.png" alt="Card image cap">
+          <div class="card-body text-center">
+            <p class="card-text">Template CV Kreatif</p>
+            <a href="#" class="btn btn-primary">Lihat</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
 
 
     <!-- Contact -->
@@ -231,15 +234,15 @@ $LatestVideoId = $result['items'][0]['id']['videoId']
             <div class="card bg-primary text-white mb-4 text-center">
               <div class="card-body">
                 <h5 class="card-title">Contact Me</h5>
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                <p class="card-text">Dapatkan informasi lengkap dengan menghubungi kami melalui kontak berikut.</p>
               </div>
             </div>
             
             <ul class="list-group mb-4">
               <li class="list-group-item"><h3>Location</h3></li>
-              <li class="list-group-item">My Office</li>
-              <li class="list-group-item">Jl. Setiabudhi No. 193, Bandung</li>
-              <li class="list-group-item">West Java, Indonesia</li>
+              <li class="list-group-item">My Study</li>
+              <li class="list-group-item">Sungai Bangek, Bali gadang</li>
+              <li class="list-group-item">Sumatera Barat, Indonesia</li>
             </ul>
           </div>
 
