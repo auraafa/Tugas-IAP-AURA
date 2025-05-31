@@ -1,45 +1,94 @@
 {
-    "menu":[
+    "menu": [
         { 
             "Kategori" : "Pizza",
             "Nama pesanan" : "American Calssic Cheese Burger",
-            "Harga" : 79091 ,
+            "Harga" : 79091,
             "Topping"  : "Tomato Sauce, Mustard Sauce, Tomato, Beef Rasher, Beef Crumble, Onion, Slice Cheese, Mozzarella Cheese",
             "Pizza Size": "Medium",
             "Crusts" : "Cheese Burst",
-            "gambar" :"AMERICANCLASSICCHEESEBURGER.png" 
-
+            "gambar" :"AMERICANCLASSICCHEESEBURGER.jpg"
         },
         { 
             "Kategori" : "Pizza",
             "Nama pesanan" : "Beef Pepperoni Feast",
-            "Harga" : 49091 ,
+            "Harga" : 49091,
             "Topping"  : "Domino's Pizza Sauce, Beef Pepperoni, Mozzarella Cheese",
             "Pizza Size": "Large",
             "Crusts" : "Classic Handtossed",
-            "gambar" :"BEEFPEPPERONIFEAST.png" 
-
+            "gambar" :"BEEFPEPPERONIFEAST.jpg"
         },
         { 
             "Kategori" : "Pizza",
             "Nama pesanan" : "Margherita",
-            "Harga" : 49091 ,
+            "Harga" : 49091,
             "Topping"  : "Domino's Pizza Sauce, Tomato, Parsley, Mozzarella Cheese",
             "Pizza Size": "Personal",
             "Crusts" : "Classic Handtossed",
-            "gambar" :"MARGHERITAco.png"
-
+            "gambar" :"MARGHERITAco.jpg"
         },
         { 
             "Kategori" : "Pizza",
             "Nama pesanan" : "Chicken Pepperoni Feast",
-            "Harga" : 49091 ,
+            "Harga" : 49091,
             "Topping"  : "Domino's Pizza Sauce, Chicken Pepperoni, Mozzarella Cheese",
             "Pizza Size": "Medium",
             "Crusts" : "Double Cheese Burst",
-            "gambar" :"CHICKENPEPPERONIFEAST.png"
-
+            "gambar" :"CHICKENPEPPERONIFEAST.jpg"
+        },
+        { 
+            "Kategori" : "Nasi",
+            "Nama pesanan" : "Nasi Goreng Spesial",
+            "Harga" : 35000,
+            "Topping"  : "Ayam, Telur, Bawang Goreng, Kerupuk",
+            "Pizza Size": "-",
+            "Crusts" : "-",
+            "gambar" :"NASIGORENGSPESIAL.jpg"
+        },
+        { 
+            "Kategori" : "Nasi",
+            "Nama pesanan" : "Nasi Ayam Geprek",
+            "Harga" : 30000,
+            "Topping"  : "Ayam Goreng, Sambal Geprek, Timun, Tomat",
+            "Pizza Size": "-",
+            "Crusts" : "-",
+            "gambar" :"NASIAYAMGEPREK.jpg"
+        },
+        { 
+            "Kategori" : "Pasta",
+            "Nama pesanan" : "Spaghetti Bolognese",
+            "Harga" : 45000,
+            "Topping"  : "Daging Sapi Cincang, Saus Tomat, Keju Parmesan",
+            "Pizza Size": "-",
+            "Crusts" : "-",
+            "gambar" :"SPAGHETTIBOLOGNESE.jpg"
+        },
+        { 
+            "Kategori" : "Pasta",
+            "Nama pesanan" : "Mac & Cheese",
+            "Harga" : 42000,
+            "Topping"  : "Macaroni, Keju Cheddar, Keju Mozzarella",
+            "Pizza Size": "-",
+            "Crusts" : "-",
+            "gambar" :"MACNCHEESE.jpg"
+        },
+        { 
+            "Kategori" : "Minuman",
+            "Nama pesanan" : "Iced Lemon Tea",
+            "Harga" : 15000,
+            "Topping"  : "Lemon, Teh, Es Batu",
+            "Pizza Size": "-",
+            "Crusts" : "-",
+            "gambar" :"ICEDLEMONTEA.jpg"
+        },
+        { 
+            "Kategori" : "Minuman",
+            "Nama pesanan" : "Cappuccino",
+            "Harga" : 25000,
+            "Topping"  : "Espresso, Susu, Foam",
+            "Pizza Size": "-",
+            "Crusts" : "-",
+            "gambar" :"CAPPUCCINO.jpg"
         }
-
     ]
 }
