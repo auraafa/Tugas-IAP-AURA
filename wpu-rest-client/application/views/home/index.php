@@ -3,9 +3,9 @@
     <div class="jumbotron" id="home">
       <div class="container">
         <div class="text-center">
-          <img src="<?= base_url(); ?>assets/img/profile1.jpg" class="rounded-circle img-thumbnail">
-          <h1 class="display-4">Fathir Ramadhano Noerman</h1>
-          <h3 class="lead">Collage Student | Programmer | Gamer</h3>
+          <img src="<?= base_url(); ?>assets/img/IMG_6322(1).jpg" class="rounded-circle img-thumbnail">
+          <h1 class="display-4">Aura Fadhlin</h1>
+          <h3 class="lead">2217020063 | 6-SI.B | Projek IAP (API)</h3>
         </div>
       </div>
     </div>
@@ -21,27 +21,27 @@
         <div class="row">
           <div class="col-md mb-4">
             <div class="card">
-              <img class="card-img-top" src="<?= base_url(); ?>assets/img/thumbs/1.jpg" alt="Card image cap">
+              <img class="card-img-top" src="<?= base_url(); ?>assets/img/thumbs/Mentawai.jpg" alt="Card image cap">
               <div class="card-body">
-                <p class="card-text">Lahir di Kota Padang tanggal 16 Oktober 2004.</p>
+                <p class="card-text">Lahir di Kabupaten Kepulauan Mentawai tepatnya Tuapejat pada tanggal 11 Mei 2004</p>
               </div>
             </div>
           </div>
 
           <div class="col-md mb-4">
             <div class="card">
-              <img class="card-img-top" src="<?= base_url(); ?>assets/img/thumbs/2.jpg" alt="Card image cap">
+              <img class="card-img-top" src="<?= base_url(); ?>assets/img/thumbs/images.jpg" alt="Card image cap">
               <div class="card-body">
-                <p class="card-text">Sekolah Dasar di SD 51 Kuranji Padang dan Sekolah Menengah Pertama di SMP Adabiah Padang.</p>
+                <p class="card-text"> Sekolah Menengah Pertama di SMP N 2 Sipora.</p>
               </div>
             </div>
           </div>
 
           <div class="col-md mb-4">
             <div class="card">
-              <img class="card-img-top" src="<?= base_url(); ?>assets/img/thumbs/3.jpg" alt="Card image cap">
+              <img class="card-img-top" src="<?= base_url(); ?>assets/img/thumbs/maxresdefault.jpg" alt="Card image cap">
               <div class="card-body">
-                <p class="card-text">Sekolah Menengah Atas di SMA Negeri 5 Padang dengan Jurusan MIPA dan Lulus di Tahun 2022.</p>
+                <p class="card-text">Sekolah Menengah Atas di SMA N 2 Sipora dengan Jurusan MIPA dan Lulus di Tahun 2022.</p>
               </div>
             </div>
           </div>   
@@ -68,9 +68,9 @@
 
           <div class="col-md mb-4">
             <div class="card">
-              <img class="card-img-top" src="<?= base_url(); ?>assets/img/thumbs/6.jpg" alt="Card image cap">
+              <img class="card-img-top" src="<?= base_url(); ?>assets/img/thumbs/10.jpg" alt="Card image cap">
               <div class="card-body">
-                <p class="card-text">Hobi saya Bermain Game, mendengarkan Musik dan Membaca Novel. Warna Kesukaan Saya Hitam</p>
+                <p class="card-text">Hobi saya Memasak</p>
               </div>
             </div>
           </div>
@@ -93,15 +93,15 @@
             <div class="card bg-primary text-white mb-4 text-center">
               <div class="card-body">
                 <h5 class="card-title">Contact Me</h5>
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                <p class="card-text">Dapatkan informasi lengkap dengan menghubungi kami melalui kontak berikut.</p>
               </div>
             </div>
             
             <ul class="list-group mb-4">
               <li class="list-group-item"><h3>Location</h3></li>
-              <li class="list-group-item">My Home</li>
-              <li class="list-group-item">Jl. Sirsak II No.80, Padang</li>
-              <li class="list-group-item">West Sumatera, Indonesia</li>
+              <li class="list-group-item">My Study</li>
+              <li class="list-group-item">Sungai Bangek, Bali gadang</li>
+              <li class="list-group-item">Sumatera Barat, Indonesia</li>
             </ul>
           </div>
 
