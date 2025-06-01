@@ -3,7 +3,7 @@
     <div class="jumbotron" id="home">
       <div class="container">
         <div class="text-center">
-          <img src="<?= base_url(); ?>assets/img/IMG_6322(1).jpg" class="rounded-circle img-thumbnail">
+          <img src="<?= base_url(); ?>assets/img/profile3.jpg" class="rounded-circle img-thumbnail">
           <h1 class="display-4">Aura Fadhlin</h1>
           <h3 class="lead">2217020063 | 6-SI.B | Projek IAP (API)</h3>
         </div>
