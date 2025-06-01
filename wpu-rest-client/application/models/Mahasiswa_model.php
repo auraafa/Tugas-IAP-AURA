@@ -7,7 +7,7 @@ class Mahasiswa_model extends CI_model {
 
     public function __construct(){
         $this->_client = new Client([
-            'base_uri' => 'http://localhost/rest-api/wpu-rest-server/api/',
+            'base_url' => 'http://localhost/rest-api/wpu-rest-server/api/',
             'auth' => ['admin', '1234']
         ]);
     }
